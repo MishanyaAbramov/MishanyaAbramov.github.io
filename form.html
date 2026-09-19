@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="main.html">
+        <h1>На главную</h1>
+    </a>
+    <main>
+        
+        <form action="https://httpbin.org/post" method="POST">
+            <h2>Форма обратной связи</h2>
+            <label for="name">ФИО</label>
+            <input type="text" name="name" style="width: 300px;" required>
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" name="email" style="width: 300px;" placeholder="Введите email" required>
+            <label for="category">Категория обращения</label>
+            <select name="category" style="width: 150px">
+                <option value="suggestion">Предложение</option>
+                <option value="complaint">Жалоба</option>
+                <option value="question">Вопрос</option>
+            </select>
+            <label for="message">Текст сообщения</label>
+            <textarea name="message" style="width: 300px; height: 100px;" required></textarea>
+            <label for="files">Вложение</label>
+            <input type="file" name="files" multiple>
+            <label for="agreement">
+                <input type="checkbox" name="agreement" required>
+                Даю согласие на обработку персональных данных
+            </label>
+            <button type="submit"
+                style="color: white; background-color: blue; border: none; padding: 10px 20px; cursor: pointer; width: 100px; text-align: center;">Отправить</button>
+        </form>
+    </main>
+</body>
