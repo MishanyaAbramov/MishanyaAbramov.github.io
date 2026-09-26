@@ -1,0 +1,28 @@
+footer {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin-top: 32px;
+
+  p {
+    margin-left: 16px;
+  }
+}
+
+body {
+  justify-content: center;
+  margin: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

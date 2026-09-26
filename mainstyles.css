@@ -1,82 +1,70 @@
-
 a {
-    text-decoration: none;
-    color: black;
-    margin: 10px;
-    font-size: 18px;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  font-size: 18px;
 }
 
 a:hover {
-    color: purple;
+  color: purple;
 }
 
 img {
-    width: 600px;
-    height: 400px;
-    padding-top: 8px;
-}
-body {
-    justify-content: center;
-    margin: 0;
+  width: 600px;
+  height: 400px;
+  padding-top: 8px;
 }
 
-table, th, td{
-    border: 1px solid black;
+table,
+th,
+td {
+  border: 1px solid black;
 }
 
 table {
-    border-collapse: collapse;
-    margin: 16px;
+  border-collapse: collapse;
+  margin: 16px;
 }
 
-th, td {
-    padding: 8px;
-    text-align: center;
+th,
+td {
+  padding: 8px;
+  text-align: center;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .cap {
-    width: 800px;
+  width: 800px;
 }
 
 main {
-    margin: 16px;
+  margin: 16px;
 }
 
 h1 {
-    margin: 0;  
+  margin: 0;
 }
 
 ul {
-    margin: 8px;
-    margin-left: 0px;
+  margin: 8px;
+  margin-left: 0px;
 }
 
 nav {
-    margin: 10px;
-    margin-left: 0px;
+  margin: 10px;
+  margin-left: 0px;
 }
 
-p, h1, h2 {
-    font-family: "Inter", serif;
+p,
+h1,
+h2 {
+  font-family: "Inter", serif;
 }
 
 section {
-    margin: 16px;
-    margin-left: 0px;
+  margin: 16px;
+  margin-left: 0px;
 }
-
-footer {
-    background-color: black;
-    color: white;
-    padding: 5px;
-    margin-top: 32px;
-   
-    p {
-        margin-left: 16px;
-    }    
-}
-

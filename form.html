@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="general.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,32 +16,38 @@
 </head>
 
 <body>
+
     <a href="main.html">
         <h1>На главную</h1>
     </a>
     <main>
-        
+
         <form action="https://httpbin.org/post" method="POST">
             <h2>Форма обратной связи</h2>
             <label for="name">ФИО</label>
-            <input type="text" name="name" style="width: 300px;" required>
+            <input type="text" id="name" name="name" style="width: 300px;" placeholder="Введите ФИО" required>
             <label for="email">Адрес электронной почты</label>
-            <input type="email" name="email" style="width: 300px;" placeholder="Введите email" required>
+            <input type="email" id="email" name="email" style="width: 300px;" placeholder="Введите email" required>
             <label for="category">Категория обращения</label>
-            <select name="category" style="width: 150px">
+            <select name="category" id="category" style="width: 150px">
                 <option value="suggestion">Предложение</option>
                 <option value="complaint">Жалоба</option>
                 <option value="question">Вопрос</option>
             </select>
             <label for="message">Текст сообщения</label>
-            <textarea name="message" style="width: 300px; height: 100px;" required></textarea>
+            <textarea name="message" id="message" style="width: 300px; height: 100px;" required
+                placeholder="Введите текст сообщения"></textarea>
             <label for="files">Вложение</label>
-            <input type="file" name="files" multiple>
+            <input type="file" id="files" name="files" multiple>
             <label for="agreement">
-                <input type="checkbox" name="agreement" required>
+                <input type="checkbox" id="agreement" name="agreement" required>
                 Даю согласие на обработку персональных данных
             </label>
             <button type="submit">Отправить</button>
         </form>
     </main>
+    <footer id="contacts">
+        <p>Позвонить нам +7-000-000-00-00 (Абрамов Михаил 251-371)</p>
+    </footer>
+    <script src="reveal-anim.js"></script>
 </body>

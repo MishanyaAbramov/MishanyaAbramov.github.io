@@ -4,10 +4,6 @@ form {
   width: 500px;
 }
 
-body {
-  padding-left: 10px;
-}
-
 /*blur*/
 body::before {
   content: "";
@@ -49,6 +45,9 @@ label {
 a {
   text-decoration: none;
   color: white;
+  text-shadow: 2px 2px 15px black;
+  transition: color 0.3s ease;
+  margin-bottom: 8px;
 }
 
 a:hover {
@@ -58,11 +57,22 @@ a:hover {
 h1 {
   font-weight: bold;
   width: 300px;
+  padding-left: 16px;
+}
+
+h2 {
+  color: white;
+  text-shadow: 2px 2px 15px black;
 }
 
 p,
 h1,
-h2 {
+h2,
+input,
+label,
+button,
+textarea,
+select {
   font-family: "Inter", serif;
 }
 
@@ -75,4 +85,14 @@ button {
   width: 100px;
   text-align: center;
   margin-top: 12px;
+}
+
+input,
+textarea,
+select {
+  padding: 8px;
+  border: 1px solid rgba(66, 80, 102, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(65.87, 80.32, 102, 0.1);
+  outline: none;
 }

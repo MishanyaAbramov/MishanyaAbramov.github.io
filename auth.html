@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
@@ -21,14 +23,17 @@
         <form action="https://httpbin.org/post" method="POST">
             <h2>Авторизация</h2>
             <label for="login">Логин</label>
-            <input type="login" name="login" style="width: 300px;" placeholder="Введите логин" required>
+            <input type="login" id="login" name="login" style="width: 300px;" placeholder="Введите логин" required>
             <label for="password">Пароль</label>
-            <input type="password" name="password" style="width: 300px;" placeholder="Введите пароль" required>
+            <input type="password" id="password" name="password" style="width: 300px;" placeholder="Введите пароль"
+                required>
             <label for="remember">
-                <input type="checkbox" name="remember" required>
-               Запомнить меня
+                <input type="checkbox" id="remember" name="remember" required>
+                Запомнить меня
             </label>
             <button type="submit">Войти</button>
         </form>
     </main>
+    <script src="reveal-anim.js"></script>
+
 </body>
