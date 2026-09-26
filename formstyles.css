@@ -1,38 +1,78 @@
 form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
 }
 
 body {
-    padding-left: 10px;
+  padding-left: 10px;
+}
+
+/*blur*/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("https://thumbs.dreamstime.com/b/food-buffet-top-view-restaurant-dish-plates-white-table-full-dishes-selection-background-145668925.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+/*vignette*/
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    margin-top: 12px;
-    margin-bottom: 4px;
-}  
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: white;
 }
 
 a:hover {
-    color: purple;
+  color: purple;
 }
 
 h1 {
-    font-weight: bold;
-    width: 300px;
+  font-weight: bold;
+  width: 300px;
 }
 
-p, h1, h2 {
-    font-family: "Inter", serif;
+p,
+h1,
+h2 {
+  font-family: "Inter", serif;
+}
+
+button {
+  color: white;
+  background-color: blue;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+  margin-top: 12px;
 }
