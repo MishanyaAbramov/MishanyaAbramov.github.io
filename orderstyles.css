@@ -1,0 +1,159 @@
+main {
+  margin: 16px;
+}
+
+a {
+  color: black;
+}
+
+.card_out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 4px 4px 4px 4px rgba(65.87, 80.32, 102, 0.1);
+  border-radius: 10px;
+
+  padding: 30px;
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .textholder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .cost {
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .long_t {
+    margin-top: 2px;
+    font-weight: 500;
+  }
+
+  .weight {
+    color: rgba(0, 0, 0, 0.401);
+    font-weight: 500;
+  }
+
+  button {
+    color: white;
+    background-color: rgb(195, 193, 180);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  button:hover {
+    background-color: blue;
+  }
+
+  transition:
+    box-shadow 0.3s ease,
+    padding 0.3s ease;
+}
+
+.card_out:hover {
+  box-shadow: 4px 4px 4px 4px rgba(65.87, 80.32, 102, 0.3);
+  padding: 40px;
+}
+
+.cardholder {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  .personal-data,
+  .order-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+p,
+h1,
+h2,
+input,
+label,
+button,
+textarea,
+select {
+  font-family: "Inter", serif;
+}
+
+input,
+textarea,
+select,
+.ord_inp {
+  padding: 8px;
+  margin: 2px;
+  border: 1px solid rgba(66, 80, 102, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(65.87, 80.32, 102, 0.1);
+  outline: none;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  color: white;
+  background-color: blue;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+  margin-top: 12px;
+}

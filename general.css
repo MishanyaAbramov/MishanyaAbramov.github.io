@@ -7,6 +7,9 @@ footer {
   p {
     margin-left: 16px;
   }
+
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 body {
@@ -25,4 +28,32 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: purple;
+  transition: color 0.15s;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+p,
+h1,
+h2,
+button,
+input,
+select {
+  font-family: "Inter", serif;
 }

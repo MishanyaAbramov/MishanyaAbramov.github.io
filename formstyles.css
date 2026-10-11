@@ -89,7 +89,8 @@ button {
 
 input,
 textarea,
-select {
+select,
+.ord_inp {
   padding: 8px;
   border: 1px solid rgba(66, 80, 102, 0.4);
   border-radius: 5px;

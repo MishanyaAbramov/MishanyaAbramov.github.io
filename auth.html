@@ -16,24 +16,29 @@
 </head>
 
 <body>
-    <a href="main.html">
-        <h1>На главную</h1>
-    </a>
-    <main>
-        <form action="https://httpbin.org/post" method="POST">
-            <h2>Авторизация</h2>
-            <label for="login">Логин</label>
-            <input type="login" id="login" name="login" style="width: 300px;" placeholder="Введите логин" required>
-            <label for="password">Пароль</label>
-            <input type="password" id="password" name="password" style="width: 300px;" placeholder="Введите пароль"
-                required>
-            <label for="remember">
-                <input type="checkbox" id="remember" name="remember" required>
-                Запомнить меня
-            </label>
-            <button type="submit">Войти</button>
-        </form>
-    </main>
+    <div class="wrapper">
+        <a href="main.html">
+            <h1>На главную</h1>
+        </a>
+        <main>
+            <form action="https://httpbin.org/post" method="POST">
+                <h2>Авторизация</h2>
+                <label for="login">Логин</label>
+                <input type="login" id="login" name="login" style="width: 300px;" placeholder="Введите логин" required>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" style="width: 300px;" placeholder="Введите пароль"
+                    required>
+                <label for="remember">
+                    <input type="checkbox" id="remember" name="remember" required>
+                    Запомнить меня
+                </label>
+                <button type="submit">Войти</button>
+            </form>
+        </main>
+        <footer id="contacts">
+            <p>Позвонить нам +7-000-000-00-00 (Абрамов Михаил 251-371)</p>
+        </footer>
+    </div>
     <script src="reveal-anim.js"></script>
 
 </body>
