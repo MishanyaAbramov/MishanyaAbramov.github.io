@@ -30,21 +30,139 @@
                 <a href="auth.html">Войти</a>
             </nav>
 
+            <section class="combos">
+                <h2>Доступные для заказа комбо</h2>
+                <div class="row1">
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/soup.png" alt="">
+                            <div>Суп</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/steak.png" alt="">
+                            <div>Главное Блюдо</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/salad.png" alt="">
+                            <div>Салат</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/tea.png" alt="">
+                            <div>Напиток</div>
+                        </div>
+                    </div>
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/soup.png" alt="">
+                            <div>Суп</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/steak.png" alt="">
+                            <div>Главное Блюдо</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/tea.png" alt="">
+                            <div>Напиток</div>
+                        </div>
+                    </div>
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/soup.png" alt="">
+                            <div>Суп</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/salad.png" alt="">
+                            <div>Салат</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/tea.png" alt="">
+                            <div>Напиток</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/steak.png" alt="">
+                            <div>Главное Блюдо</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/salad.png" alt="">
+                            <div>Салат</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/tea.png" alt="">
+                            <div>Напиток</div>
+                        </div>
+                    </div>
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/steak.png" alt="">
+                            <div>Главное Блюдо</div>
+                        </div>
+                        <div class="itemholder">
+                            <img src="icons/tea.png" alt="">
+                            <div>Напиток</div>
+                        </div>
+                    </div>
+                    <div class="comboholder">
+                        <div class="itemholder">
+                            <img src="icons/cookies.png" alt="">
+                            <div>Десерт</div>
+                            <div style="font-size: smaller; font-style: italic;">Можно добавить к любому заказу</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="products">
                 <h2>Супы</h2>
+                <div class="filters">
+                    <button class="filter" data-kind="fish">Рыбный</button>
+                    <button class="filter" data-kind="meat">Мясной</button>
+                    <button class="filter" data-kind="veg">Вегетарианский</button>
+                </div>
                 <div class="cardholder" data-dish="soup"></div>
             </section>
 
             <section class="products">
                 <h2>Главные блюда</h2>
+                <div class="filters">
+                    <button class="filter" data-kind="fish">Рыбное</button>
+                    <button class="filter" data-kind="meat">Мясное</button>
+                    <button class="filter" data-kind="veg">Вегетарианское</button>
+                </div>
                 <div class="cardholder" data-dish="mainDish"></div>
             </section>
 
             <section class="products">
+                <h2>Салаты и стартеры</h2>
+                <div class="filters">
+                    <button class="filter" data-kind="fish">Рыбный</button>
+                    <button class="filter" data-kind="meat">Мясной</button>
+                    <button class="filter" data-kind="veg">Вегетарианский</button>
+                </div>
+                <div class="cardholder" data-dish="salad"></div>
+            </section>
+
+            <section class="products">
                 <h2>Напитки</h2>
+                <div class="filters">
+                    <button class="filter" data-kind="cold">Холодный</button>
+                    <button class="filter" data-kind="hot">Горячий</button>
+                </div>
                 <div class="cardholder" data-dish="drink"></div>
             </section>
 
+            <section class="products">
+                <h2>Десерты</h2>
+                <div class="filters">
+                    <button class="filter" data-kind="small">Маленькая порция</button>
+                    <button class="filter" data-kind="medium">Средняя порция</button>
+                    <button class="filter" data-kind="large">Большая порция</button>
+                </div>
+                <div class="cardholder" data-dish="dessert"></div>
+            </section>
             <section class="order-form">
                 <h1>Сделать заказ</h1>
                 <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
@@ -57,8 +175,16 @@
                         <p id="mainDish" name="mainDish" class="ord_inp">
                             Блюдо не выбрано
                         </p>
+                        <label for="salad">Салат</label>
+                        <p id="salad" name="salad" class="ord_inp">
+                            Блюдо не выбрано
+                        </p>
                         <label for="drink">Напиток</label>
                         <p id="drink" name="drink" class="ord_inp">
+                            Блюдо не выбрано
+                        </p>
+                        <label for="dessert">Десерт</label>
+                        <p id="dessert" name="dessert" class="ord_inp">
                             Блюдо не выбрано
                         </p>
 
@@ -75,17 +201,17 @@
                     <div class="personal-data">
                         <h2>Ваши данные</h2>
                         <label for="name">Имя</label>
-                        <input type="text" id="name" name="name" style="width: 300px;" placeholder="Введите имя"
-                            required>
+                        <input type="text" value="dsfsdfsdfsdf" id="name" name="name" style="width: 300px;"
+                            placeholder="Введите имя" required>
                         <label for="email">Адрес электронной почты</label>
-                        <input type="email" id="email" name="email" style="width: 300px;" placeholder="Введите email"
-                            required>
+                        <input type="email" value='fsdf@sdfsdfsdfsdsdf' id="email" name="email" style="width: 300px;"
+                            placeholder="Введите email" required>
                         <label for="agreement">
                             <input type="checkbox" id="agreement" name="agreement">
                             Получать информацию о новых акциях и скидках
                         </label>
                         <label for="phone">Номер телефона</label>
-                        <input type="tel" id="phone" name="phone" style="width: 300px;"
+                        <input type="tel" value="12312321321" id="phone" name="phone" style="width: 300px;"
                             placeholder="Введите номер телефона" required>
                         <fieldset class="fieldset">
                             <legend class="legend">Время доставки:</legend>
@@ -99,11 +225,11 @@
                             </p>
                         </fieldset>
                         <label for="address">Адрес доставки</label>
-                        <input type="text" id="address" name="address" style="width: 300px;"
+                        <input type="text" value="adres" id="address" name="address" style="width: 300px;"
                             placeholder="Введите адрес доставки" required>
                         <div class="italic">Доставка осуществляется только по Москве</div>
                         <label for="delivery-time">Время доставки</label>
-                        <input min="10:00" max="22:00" type="time" id="delivery-time" name="delivery-time"
+                        <input min="10:00" value="10:00" max="22:00" type="time" id="delivery-time" name="delivery-time"
                             style="width: 300px;" required>
                         <div class="italic">Доставка осуществляется с 10:00 до 22:00</div>
                         <div class="buttons">
@@ -130,9 +256,17 @@
             <button class="append">Добавить</button>
         </div>
     </template>
+    <template id="notification-template">
+        <div class="notification-overlay">
+            <div class="notification-box">
+                <p class="notification-text"></p>
+                <button type="button" class="notification-btn">Окей</button>
+            </div>
+        </div>
+    </template>
 
     <script src="order-script.js"></script>
-    <script src="reveal-anim.js"></script>
+    <!-- <script src="reveal-anim.js"></script> -->
 </body>
 
 </html>
