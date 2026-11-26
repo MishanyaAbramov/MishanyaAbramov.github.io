@@ -5,7 +5,7 @@ const result = {
   drink: "",
   dessert: "",
 };
-
+let DISHES = [];
 const categories = ["soup", "mainDish", "salad", "drink", "dessert"];
 let catPrices = [0, 0, 0, 0, 0];
 let currentCost = 0;
@@ -42,32 +42,6 @@ const handleClickBtn = function (event) {
     costBlock.style.display = "block";
   }
 };
-
-const sortedDishes = DISHES.sort((a, b) => a.name.localeCompare(b.name, "ru"));
-
-for (let j = 0; j < categories.length; j++) {
-  for (let i = 0; i < DISHES.length; i++) {
-    const { image, price, name, count, keyword } = sortedDishes[i];
-
-    if (sortedDishes[i].category != categories[j]) {
-      continue;
-    }
-
-    const foodCard = templateContent.cloneNode(true).querySelector(".card_out");
-
-    foodCard.querySelector(".food_img").src = image;
-    foodCard.querySelector(".cost").textContent = price + "₽";
-    foodCard.querySelector(".long_t").textContent = name;
-    foodCard.querySelector(".weight").textContent = count;
-
-    const btn = foodCard.querySelector(".append");
-    foodCard.dataset.dish = keyword;
-    btn.addEventListener("click", handleClickBtn);
-    document
-      .querySelector(`[data-dish="${categories[j]}"]`)
-      .appendChild(foodCard);
-  }
-}
 
 const filterButtons = document.querySelectorAll(".filter");
 
@@ -202,3 +176,62 @@ document.querySelector("form").addEventListener("reset", function () {
     input.remove();
   });
 });
+
+const API_URL = "https://mishanyaabramov.github.io/dishes.json";
+
+function renderDishes() {
+  const sortedDishes = [...DISHES].sort((a, b) =>
+    a.name.localeCompare(b.name, "ru"),
+  );
+
+  const template = document.querySelector("#template");
+  const templateContent = template.content;
+
+  // Очищаем контейнеры категорий перед повторным рендером
+  categories.forEach((cat) => {
+    const holder = document.querySelector(`[data-dish="${cat}"]`);
+    if (holder) holder.innerHTML = "";
+  });
+
+  for (let j = 0; j < categories.length; j++) {
+    for (let i = 0; i < sortedDishes.length; i++) {
+      const { image, price, name, count, keyword } = sortedDishes[i];
+
+      if (sortedDishes[i].category !== categories[j]) {
+        continue;
+      }
+
+      const foodCard = templateContent
+        .cloneNode(true)
+        .querySelector(".card_out");
+
+      foodCard.querySelector(".food_img").src = image;
+      foodCard.querySelector(".cost").textContent = price + "₽";
+      foodCard.querySelector(".long_t").textContent = name;
+      foodCard.querySelector(".weight").textContent = count;
+
+      const btn = foodCard.querySelector(".append");
+      foodCard.dataset.dish = keyword;
+      btn.addEventListener("click", handleClickBtn);
+
+      document
+        .querySelector(`[data-dish="${categories[j]}"]`)
+        .appendChild(foodCard);
+    }
+  }
+}
+
+async function loadDishes() {
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) {
+      throw new Error(`Ошибка загрузки: ${response.status}`);
+    }
+    DISHES = await response.json();
+    renderDishes();
+  } catch (error) {
+    console.error("Не удалось загрузить блюда:", error);
+    showNotification("Не удалось загрузить меню. Попробуйте позже.");
+  }
+}
+document.addEventListener("DOMContentLoaded", loadDishes);
