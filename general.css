@@ -44,6 +44,8 @@ a:hover {
 .wrapper {
   box-sizing: border-box;
   min-height: 100%;
+  height: 100vh;
+  justify-content: space-between;
 
   display: flex;
   flex-direction: column;

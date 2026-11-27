@@ -22,10 +22,9 @@
                 <h1>Food Construct</h1>
             </a>
             <nav>
-                <a href="#about">О нас</a>
+                <a href="main.html">О нас</a>
                 <a href="order.html">Собрать Ланч</a>
-                <a href="">Заказы</a>
-                <a href="#contacts">Контакты</a>
+                <a href="checkout.html">Заказы</a>
                 <a href="form.html">Обратная связь</a>
                 <a href="auth.html">Войти</a>
             </nav>
@@ -163,82 +162,19 @@
                 </div>
                 <div class="cardholder" data-dish="dessert"></div>
             </section>
-            <section class="order-form">
-                <h1>Сделать заказ</h1>
-                <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
 
-                    <div class="order-data">
-                        <h2>Ваш заказ</h2>
-                        <label for="soup">Суп</label>
-                        <p id="soup" class="ord_inp" name="soup">Блюдо не выбрано</p>
-                        <label for="mainDish">Главное блюдо</label>
-                        <p id="mainDish" name="mainDish" class="ord_inp">
-                            Блюдо не выбрано
-                        </p>
-                        <label for="salad">Салат</label>
-                        <p id="salad" name="salad" class="ord_inp">
-                            Блюдо не выбрано
-                        </p>
-                        <label for="drink">Напиток</label>
-                        <p id="drink" name="drink" class="ord_inp">
-                            Блюдо не выбрано
-                        </p>
-                        <label for="dessert">Десерт</label>
-                        <p id="dessert" name="dessert" class="ord_inp">
-                            Блюдо не выбрано
-                        </p>
-
-                        <div id="costBlock" style="display: none">
-                            <label for="cost" class="lab">Стоимость заказа</label>
-                            <p id="cost" name="cost" class="ord_inp">
-                                0
-                            </p>
-                        </div>
-
-                        <label for="comment">Комментарий к заказу</label>
-                        <textarea name="comment" id="comment" style="width: 300px; height: 100px;"></textarea>
+            <div class="sticky-order-bar" id="stickyBar">
+                <div class="sticky-order-inner">
+                    <div class="sticky-order-summary">
+                        <span class="sticky-order-count" id="stickyCount">0 блюд</span>
+                        <span class="sticky-order-cost" id="stickyCost">0 ₽</span>
                     </div>
-                    <div class="personal-data">
-                        <h2>Ваши данные</h2>
-                        <label for="name">Имя</label>
-                        <input type="text" value="dsfsdfsdfsdf" id="name" name="name" style="width: 300px;"
-                            placeholder="Введите имя" required>
-                        <label for="email">Адрес электронной почты</label>
-                        <input type="email" value='fsdf@sdfsdfsdfsdsdf' id="email" name="email" style="width: 300px;"
-                            placeholder="Введите email" required>
-                        <label for="agreement">
-                            <input type="checkbox" id="agreement" name="agreement">
-                            Получать информацию о новых акциях и скидках
-                        </label>
-                        <label for="phone">Номер телефона</label>
-                        <input type="tel" value="12312321321" id="phone" name="phone" style="width: 300px;"
-                            placeholder="Введите номер телефона" required>
-                        <fieldset class="fieldset">
-                            <legend class="legend">Время доставки:</legend>
-                            <p class="for_radio" id="first_radio">
-                                <input type="radio" id="fast" name="time_del" value="fast" checked>
-                                <label for="fast" class="lab">Как можно скорее</label>
-                            </p>
-                            <p class="for_radio" id="second_radio">
-                                <input type="radio" id="choice_time" name="time_del" value="choice_time">
-                                <label for="choice_time" class="lab">К указанному времени</label>
-                            </p>
-                        </fieldset>
-                        <label for="address">Адрес доставки</label>
-                        <input type="text" value="adres" id="address" name="address" style="width: 300px;"
-                            placeholder="Введите адрес доставки" required>
-                        <div class="italic">Доставка осуществляется только по Москве</div>
-                        <label for="delivery-time">Время доставки</label>
-                        <input min="10:00" value="10:00" max="22:00" type="time" id="delivery-time" name="delivery-time"
-                            style="width: 300px;" required>
-                        <div class="italic">Доставка осуществляется с 10:00 до 22:00</div>
-                        <div class="buttons">
-                            <button type="submit">Отправить</button>
-                            <button type="reset">Очистить</button>
-                        </div>
-                    </div>
-                </form>
-            </section>
+                    <a href="checkout.html" class="sticky-order-btn" id="stickyCheckoutBtn">
+                        Перейти к оформлению
+                    </a>
+                </div>
+            </div>
+
         </main>
         <footer id="contacts">
             <p>Позвонить нам +7-000-000-00-00 (Абрамов Михаил 251-371)</p>
@@ -256,18 +192,10 @@
             <button class="append">Добавить</button>
         </div>
     </template>
-    <template id="notification-template">
-        <div class="notification-overlay">
-            <div class="notification-box">
-                <p class="notification-text"></p>
-                <button type="button" class="notification-btn">Окей</button>
-            </div>
-        </div>
-    </template>
 
+    <script src="shared.js"></script>
     <script src="order-script.js"></script>
-    <!-- <script src="reveal-anim.js"></script> -->
-    <script src="load-dishes.js"></script>
+
 </body>
 
 </html>
